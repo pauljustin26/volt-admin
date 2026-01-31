@@ -1,16 +1,93 @@
-# React + Vite
+# Volt Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://volt-admin.vercel.app/login)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-Currently, two official plugins are available:
+**Volt Admin** is the centralized web-based management console for the Volt ecosystem. Built with **React (Vite)** and **Tailwind CSS**, it allows administrators to monitor user activity, manage rental units ("Volts"), track financial transactions, and view system logs in real-time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
+Access the admin dashboard here: **[https://volt-admin.vercel.app/login](https://volt-admin.vercel.app/login)**
+*(Note: Replace with your actual deployed URL)*
 
-## React Compiler
+## ⚡ Features
+- **Dashboard Analytics:** Visual overview of system health and metrics using Recharts.
+- **User Management:** View, manage, and monitor registered users.
+- **Unit Management (Volts):** Track status and inventory of power bank units.
+- **Financial Oversight:** Detailed views for **Transactions** and **Payments**.
+- **System Logs:** Comprehensive audit trails for system activities.
+- **Data Export:** Generate reports in PDF or Excel formats (using `jspdf` & `xlsx`).
+- **Secure Authentication:** Protected routes with Firebase Auth and automatic inactivity logout.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
+- **Framework:** [React](https://react.dev/) (Vite)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Routing:** [React Router DOM](https://reactrouter.com/)
+- **State/Auth:** React Context API & Firebase
+- **Visualization:** [Recharts](https://recharts.org/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Utilities:** Axios, XLSX, jsPDF
 
-## Expanding the ESLint configuration
+## 📂 Project Directory
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+volt-admin/
+├── public/                     # Static assets
+├── src/
+│   ├── assets/                 # Images and icons
+│   ├── components/             # Reusable UI components (Sidebar, AutoLogout)
+│   ├── context/                # Global state (AuthContext)
+│   ├── pages/                  # Application views
+│   │   ├── Dashboard.jsx       # Main analytics view
+│   │   ├── Login.jsx           # Admin authentication
+│   │   ├── Users.jsx           # User management
+│   │   ├── Volts.jsx           # Unit management
+│   │   ├── Transactions.jsx    # Transaction history
+│   │   ├── Payments.jsx        # Payment records
+│   │   ├── Logs.jsx            # System logs
+│   │   └── Settings.jsx        # Admin settings
+│   ├── routes/                 # Route guards (ProtectedRoute)
+│   ├── services/               # API and Firebase services
+│   └── utils/                  # Helper functions (Export helpers)
+├── eslint.config.js            # Linting configuration
+├── package.json                # Dependencies and scripts
+├── vercel.json                 # Vercel deployment config
+└── vite.config.js              # Vite configuration
+🚀 Getting Started
+Prerequisites
+Node.js (Latest LTS recommended)
+
+npm or yarn
+
+Installation
+Clone the repository:
+
+Bash
+git clone <repository-url>
+cd volt-admin
+Install dependencies:
+
+Bash
+npm install
+Running the App
+Start the development server:
+
+Bash
+npm run dev
+Open your browser to http://localhost:5173 (or the port shown in your terminal).
+
+☁️ Deployment
+This project is configured for seamless deployment on Vercel.
+
+The vercel.json file handles the build configuration.
+
+Push changes to your main branch to trigger a redeploy (if connected to Git).
+
+🧪 Scripts
+npm run dev: Starts the Vite development server.
+
+npm run build: Builds the app for production.
+
+npm run preview: Locally preview the production build.
+
+npm run lint: Runs ESLint to check code quality.
