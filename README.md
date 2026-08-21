@@ -7,7 +7,7 @@
 **Volt Admin** is the centralized web-based management console for the Volt ecosystem. Built with **React (Vite)** and **Tailwind CSS**, it allows administrators to monitor user activity, manage rental units ("Volts"), track financial transactions, and view system logs in real-time.
 
 ## 🔗 Live Demo
-Access the admin dashboard here: **[https://volt-admin.vercel.app/login](https://volt-admin.vercel.app/login)**
+Access the admin dashboard here: **[https://volt-admin.vercel.app/login](https://volt-admin.vercel.app/login)](https://voltvault-web.vercel.app/login)**
 *(Note: Replace with your actual deployed URL)*
 
 ## ⚡ Features
